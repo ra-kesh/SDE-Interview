@@ -26,13 +26,13 @@
 // 1 <= nums[i] <= 1000
 
 function getConcatenation(nums) {
-  let res = [];
+  let ans = [];
 
   for (let i = 0; i < nums.length * 2; i++) {
-    res.push(nums[i % nums.length]);
+    ans.push(nums[i % nums.length]);
   }
 
-  console.log(res);
+  return ans;
 }
 
-getConcatenation([1, 2, 1, 1, 3]);
+console.log(getConcatenation([1, 2, 1, 1, 3]));

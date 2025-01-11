@@ -35,25 +35,24 @@ function containsDuplicate(nums) {
   const numsSet = new Set();
   for (const num of nums) {
     if (numsSet.has(num)) {
-      return console.log(true);
+      return true;
     }
     numsSet.add(num);
   }
-  return console.log(false);
+  return false;
 }
 
-containsDuplicate([1, 2, 2, 3, 4, 5]);
+console.log(containsDuplicate([1, 2, 2, 3, 4, 5]));
 
 function hasDuplicate(nums) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] === nums[j]) return console.log(true);
+      if (nums[i] === nums[j]) return true;
     }
   }
-  return console.log(false);
+  return false;
 }
-
-hasDuplicate([1, 2, 3, 4, 5]);
+console.log(hasDuplicate([1, 2, 3, 4, 5]));
 
 function conatainsDuplicateShort(nums) {
   return new Set(nums).size < nums.length;
